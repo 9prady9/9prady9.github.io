@@ -1,0 +1,22 @@
+<html>
+<head><Title>CSCE 645 Project Update1</Title></head>
+<body>
+<small>
+<u>Title</u>: Sweep volume generation of an Unmanned Ground Vehicle with dynamic geometry.<br/>
+<u>Name</u>: Pradeep Garigipati<br/>
+
+<ul>
+<li><p><u>Summary of Work to Date</u>:</p> Representation of the Unmanned Ground vehicle in terms of basic geometrics using sphere, cylinder has been achieved, however, there are some issues in the visibility of the modelled object which are to be dealt with before proceeding towards the next goal.</li>
+
+<li><p><u>Analysis of Work</u>:</p> Basic object representation has been completed, but there are errors in the normal vector computation at different vertices of the polygon which would decide the visibility of the modelled object in openGL. Viewing the object from certain directions is fine as shown in the figures A and B. The distorted visibilty due to wrong normal vector computation is shown in figure C. I would be able to solve this problem within the next few days, .</li>
+<pre>A)<img src="./fine.png" alt="Fine render"/> B)<img src="./turn1.png" alt="After rotation"/> C)<img src="./turn2.png" alt="few degrees rotation"/></pre>
+Figure A - View in the direction of 0.0,0.0,1.0 to 0.0,0.0,-1.0 <br/>
+Figure B - View when A is rotated about >90 about x-axis.<br/>
+Figure C - Arbitrary angle.
+<li><p><u>Plan for Completion</u>:</p> Goals:
+<ul><li>Correction of the object visibility by rectifying the normal vector computation errors.</li>
+<li>Start with the next goal of generating the sweep volume of this object along a given path.</li></ul></li>
+<ul>
+</small>
+</body>
+</html>

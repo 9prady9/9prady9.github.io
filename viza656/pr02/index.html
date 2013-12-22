@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ray Traced</title>
+	<link rel="stylesheet" type="text/css" href=".\..\..\style.css"/>
+	<script type="text/javascript">
+	var data = {"00.jpg":{url:"./00.jpg", text:"Normal interpolation issue seems to be resolved, just tried loading textured cube; Texturing is also working for cube now."},
+				"20.jpg":{url:"./20.jpg", text:"Normal interpolation issue seems to be resolved; Also, the problem with CUBE obj is resolved. The problem was related to floating point accuracy of A, A1,A2,A3 vector components. Choosing the max component of A vectors to calculate u,v resolved the issue."},
+				"19.jpg":{url:"./19.jpg", text:"Normal interpolation issue is not yet resolved, just tried loading textured cubehandle; Texturing seems to work fine."},
+				"18.jpg":{url:"./18.jpg", text:"Textured tetrahandle; Is doesn't appear that smoothed normals are getting rendered properly, have to recheck that part again with a smaller mesh."},
+				"17.jpg":{url:"./17.jpg", text:"Cube loaded with texturing and normal interpolation."},
+				"16.jpg":{url:"./16.jpg", text:"Normal interpolation introduced. Once normal interpolation was introduced, the face started to show two different highlights for each of the point lights in the scene, which should be the case unlike below image;"},
+				"15.jpg":{url:"./15.jpg", text:"Tetrahedron loaded from OBJ file along with texture mapping;NO normal interpolation."},
+				"14.jpg":{url:"./14.jpg", text:"Cube loaded from OBJ file; Texturing for meshes was introduced from here. No Normal interpolation."},
+				"13.jpg":{url:"./13.jpg", text:"Cubehandle mesh loaded; Normals are not interpolated. All the three big meshes took almost 2 hours to render with 4 samples per pixel and two point light sources. Is the time supposed to be this high, I have to recheck if I am doing any uneccesary/extra calculations."},
+				"12.jpg":{url:"./12.jpg", text:"Dodecahandle mesh loaded; No normal interpolation."},
+				"11.jpg":{url:"./11.jpg", text:"Tetrahandle mesh loaded; No normal interpolation."},
+				"10.jpg":{url:"./10.jpg", text:"Tetrahedron loaded, but very close to eye; Normals are not interpolated; Have to try repositioning the mesh."},
+				"09.jpg":{url:"./09.jpg", text:"With CUBE obj, something weird is happening. I am not sure about it, looks like some of the faces on the other side are also being included in the computations. It is weird since such problem didn't come for other meshes."},
+				"08.jpg":{url:"./08.jpg", text:"Tetrahedron with dark side lit blue by gooch & gooch effect; Just wanted to confirm if it is rendering tetrahedron completely."},
+				"07.jpg":{url:"./07.jpg", text:"First OBJ -> Tetrahedron. Meshes are loading properly."},
+				"06.jpg":{url:"./06.jpg", text:"Cosine hyperbolic of a -ve value is undefined (for two sheet hyperboloid), hence one of the sheets was being rendered invisilbe. Issue is resolved now. Texturing for all objects working fine now."},
+				"05.jpg":{url:"./05.jpg", text:"Texturing for Plane, Sphere, Ellipsoid, Single sheet hyperboloid, cylinder, and Cone is working fine. However, for two sheet hyperboloid, somehow the top sheet is being rendered invisible!, haven't figured it out yet."},
+				"04.jpg":{url:"./04.jpg", text:"Plane and ellipsoid texturing working fine."},
+				"03.jpg":{url:"./03.jpg", text:"Texturing on plane is working fine now; I was using same n0 and n1 for all types of planes, hence the below errors. It is corrected now."},
+				"02.jpg":{url:"./02.jpg", text:"For Ellipsoid, it is working fine. However, for plane, I am doing something wrong currently."},
+				"01.jpg":{url:"./01.jpg", text:"Tried out an Texture image of pool of water :). Unfortunately it didn't work and got these stripes of blue. Working on the issue resolution."} };
+	function loadLargeImage(thumbnailSrc)
+	{
+		var entry = data[thumbnailSrc.getAttribute("src")];
+		document.getElementById("canvas").setAttribute("src",entry.url);
+		var txtElement = document.getElementById("textArea");
+		while(txtElement.childNodes.length >= 1) {
+			txtElement.removeChild(txtElement.firstChild);
+		}
+		txtElement.appendChild(txtElement.ownerDocument.createTextNode(entry.text));
+	}
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../gallery.css"/>
+</head>
+
+<body>
+
+<center>
+<b>
+	<font size=6>Texturing implicit and OBJ objects</font>
+</b>
+<br/>
+<table>
+<tr>
+<div class="slider_panel">
+	<ul>
+		<li><img src="00.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="20.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="19.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="18.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="17.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="16.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="15.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="14.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="13.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="12.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="11.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="10.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="09.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="08.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="07.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="06.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="05.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="04.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="03.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="02.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="01.jpg" onclick="loadLargeImage(this)" /></li>
+	</ul>
+</div>
+</tr>
+<tr>
+	<td>
+		<img id="canvas" src="" alt="Click on a thumbnail to see that image here!"/>
+	</td>
+	<td>
+		<div id="textArea" style="width:240px">Description correspoding to the image cliked will be displayed here.</div>
+	</td>
+</tr>
+</table>
+</center>
+
+</body>
+</html>

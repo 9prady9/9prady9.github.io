@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ray Traced</title>
+	<link rel="stylesheet" type="text/css" href=".\..\..\style.css"/>
+	<script type="text/javascript">
+	var data = {"00.jpg":{url:"./00.jpg", text:"IBL with Cube Mapping."},
+				"10.jpg":{url:"./10.jpg", text:"Cube Mapping, Very nice image :)."},
+				"09.jpg":{url:"./09.jpg", text:"Cube Mapping, seams are visible because of low resolution images used for the cube."},
+				"08.jpg":{url:"./08.jpg", text:"Image based lighting with Sphere Mapping."},
+				"07.jpg":{url:"./07.jpg", text:"Sphere Mapping."},
+				"06.jpg":{url:"./06.jpg", text:"Final gathering with color bleeding."},
+				"05.jpg":{url:"./05.jpg", text:"Direct illumination image."},
+				"04.jpg":{url:"./04.jpg", text:"Only color bleeding."},
+				"03.jpg":{url:"./03.jpg", text:"Ambient Occlusion with Length of the ray as 3; Used Geodesic of 642 radials."},
+				"02.jpg":{url:"./02.jpg", text:"Ambient Occlusion is working; Rendered with the Geodesic of 642 radials."},
+				"01.jpg":{url:"./01.jpg", text:"Rendered with the Geodesic of 12 radials."}};
+	function loadLargeImage(thumbnailSrc)
+	{
+		var entry = data[thumbnailSrc.getAttribute("src")];
+		document.getElementById("canvas").setAttribute("src",entry.url);
+		var txtElement = document.getElementById("textArea");
+		while(txtElement.childNodes.length >= 1) {
+			txtElement.removeChild(txtElement.firstChild);
+		}
+		txtElement.appendChild(txtElement.ownerDocument.createTextNode(entry.text));
+	}
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../gallery.css"/>
+</head>
+
+<body>
+<center>
+
+<b>
+	<font size=6>Image based lighting</font>
+</b>
+<br/>
+<table>
+<tr>
+<div class="slider_panel">
+	<ul>
+		<li><img src="00.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="10.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="09.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="08.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="07.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="06.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="04.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="05.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="03.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="02.jpg" onclick="loadLargeImage(this)" /></li>
+		<li><img src="01.jpg" onclick="loadLargeImage(this)" /></li>
+	</ul>
+</div>
+</tr>
+<tr>
+	<td>
+		<img id="canvas" src="" alt="Click on a thumbnail to see that image here!"/>
+	</td>
+	<td>
+		<div id="textArea" style="width:240px">Description correspoding to the image cliked will be displayed here.</div>
+	</td>
+</tr>
+</table>
+
+	<!--iframe width="425" height="349" src="http://www.youtube.com/embed/ndbZWkLFeNI" frameborder="0" allowfullscreen></iframe-->
+	
+</center>
+</body>
+</html>

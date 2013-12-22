@@ -1,0 +1,40 @@
+#canvas {
+width: 640px;
+height: 480px;
+border-width: 4px;
+border-style: groove;
+}
+
+div.slider_panel {
+width: 880px;
+height: 102px;
+border-style: ridge;
+border-width: 5px;
+overflow:scroll;
+white-space:nowrap;
+}
+
+div.slider_panel ul,
+div.slider_panel li{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	display: inline;
+}
+
+div.slider_panel img {
+width: 100px;
+height: 75px;
+border-color:black;
+border-style:solid;
+border-width:2px;
+margin: 1px 1px;
+padding: 0;
+outline: none;
+}
+
+div.slider_panel img:hover {
+border-color:white;
+}
