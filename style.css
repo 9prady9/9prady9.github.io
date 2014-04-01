@@ -1,6 +1,9 @@
 body{
-background-color:#2A2A2A;
-color:white;
+background-image:url('sea_skyline.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+color:black;
+#text-shadow: -1px 0 #0F0F0F, 0 1px #0F0F0F, 1px 0 #0F0F0F, 0 -1px #0F0F0F;
 margin-top:50px;
 margin-bottom:50px;
 font-family:Calibri, Verdana, monospace;
@@ -11,11 +14,6 @@ z-index:-1;
 #details{
 font-style:italic;
 font-size:20px;
-}
-
-#Profile{
-font:'Courier New', Courier, monospace;
-color:Gold;
 }
 
 div{
@@ -29,20 +27,49 @@ z-index:0;
 img{
 border-style:solid;
 border-width:3px;
+border-color:white;
 margin: 1px 1px;
 z-index:0;
 }
 
 a{
 font-family:'Courier New', Courier, monospace;
-color:SandyBrown;
 z-index:0;
 }
 
-a.ErWork{
-font:'Courier New', Courier, monospace;
-color:DeepSkyBlue;
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
 }
+
+a:hover{
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+a.normal { color:#0099FF; }
+a.onOcean { color:black; }
+a.onRocks { color:white; }
+a.onGrass{ color:SandyBrown; }
 
 b {
 z-index:0;
@@ -51,6 +78,7 @@ z-index:0;
 b.head{
 font:Verdana, Arial, 'Sans-serif';
 font-size:18px;
+color:white;
 }
 
 b.leaf{
