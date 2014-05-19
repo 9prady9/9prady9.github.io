@@ -1,8 +1,8 @@
 body{
-background-image:url('sea_skyline.jpg');
+background-color:#232323;
 background-repeat:no-repeat;
 background-size:100% 100%;
-color:black;
+color:white;
 #text-shadow: -1px 0 #0F0F0F, 0 1px #0F0F0F, 1px 0 #0F0F0F, 0 -1px #0F0F0F;
 margin-top:50px;
 margin-bottom:50px;
@@ -37,39 +37,7 @@ font-family:'Courier New', Courier, monospace;
 z-index:0;
 }
 
-@-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff,
-               0 0 20px  #fff,
-               0 0 30px  #fff,
-               0 0 40px  #FF1177,
-               0 0 70px  #FF1177,
-               0 0 80px  #FF1177,
-               0 0 100px #FF1177,
-               0 0 150px #FF1177;
-  }
-  to {
-    text-shadow: 0 0 5px #fff,
-               0 0 10px #fff,
-               0 0 15px #fff,
-               0 0 20px #FF1177,
-               0 0 35px #FF1177,
-               0 0 40px #FF1177,
-               0 0 50px #FF1177,
-               0 0 75px #FF1177;
-  }
-}
-
-a:hover{
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
-}
-
-a.normal { color:#0099FF; }
-a.onOcean { color:black; }
-a.onRocks { color:white; }
-a.onGrass{ color:SandyBrown; }
+a.link { color:#0099AA; }
 
 b {
 z-index:0;
