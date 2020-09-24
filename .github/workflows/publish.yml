@@ -1,0 +1,19 @@
+name: glog publish
+
+on:
+  push:
+    branches:
+      - gatsby_based
+
+jobs:
+  build:
+    env:
+      GIT_REPO_STATS_READ_TOKEN_FOR_GATSBY: ${{ secrets.GIT_REPO_STATS_READ_TOKEN_FOR_GATSBY }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.GIT_REPO_STATS_READ_TOKEN_FOR_GATSBY }}
+          deploy-branch: master
+          gatsby-args: --prefix-paths

@@ -1,0 +1,19 @@
+:root {
+    --main-bg-color: #383333;
+    --navbar-menu-bg-color: #695f5f;
+    --navbar-menu-item-highlight-color: #857878;
+    --page-max-width: 1920;
+    --a-color: #c2b091;
+    --text-color: #a1c9f1;
+    --site-title-color: rgb(224, 224, 127);
+    --grid-container-padding: 1px;
+    --grid-item-background-color: rgba(32, 29, 29, 0.8);
+    --grid-item-border-color: rgb(112, 112, 112);
+    --grid-item-shadow-color: rgb(0,255,255);
+    --grid-item-min-width: 256px;
+    --grid-item-max-width: 512px;
+    --grid-item-min-height: 100px;
+    --grid-item-border-width: 1px;
+    --grid-item-border-radius: 5px;
+    --grid-item-border-padding: 1px;
+}

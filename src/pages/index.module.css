@@ -1,0 +1,38 @@
+@import "../styles/global.css";
+
+body {
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.grid_container {
+    --repeat: auto-fit;
+}
+@media (min-width: calc(275px * 3)) {
+    .grid_container {
+      --repeat: 3;
+    }
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(var(--repeat, auto-fit), minmax(256px, 1fr));
+    padding: var(--grid-container-padding);
+    border-style: none;
+    width: 100%;
+}
+
+.grid_item {
+    background-color: var(--grid-item-background-color);
+    padding: var(--grid-item-border-padding);
+    font-size: 30px;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    min-width: var(--grid-item-min-width);
+    max-width: var(--grid-item-max-width);
+    min-height: var(--grid-item-min-height);
+    border: var(--grid-item-border-width) solid var(--grid-item-border-color);
+    border-radius: var(--grid-item-border-radius);
+    box-shadow: 0 0 1px 0 var(--grid-item-shadow-color);
+}

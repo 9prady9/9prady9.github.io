@@ -1,0 +1,35 @@
+.publication {
+    display: flex;
+    margin: 0 auto 12px auto;
+  }
+  
+  .publication:last-child {
+    margin-bottom: 0;
+  }
+
+  .avatar_thumbnail {
+    flex: 1;
+    margin-left: 0;
+    height: auto;
+    max-width: 64px;
+    object-fit: contain;
+    float: left;
+  }
+  
+  .brief_desc {
+    flex: 6;
+    margin-left: 18px;
+    padding: 12px;
+    float: left;
+  }
+  
+  .pub_title {
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-size: 1.1em;
+  }
+  
+  .excerpt {
+    margin: 0;
+    font-size: 1em;
+  }

@@ -1,0 +1,23 @@
+@import "../styles/global.css";
+
+.layout {
+    margin: 3rem auto;
+    max-width: var(--page-max-width);
+    padding: 0 1rem;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-size: large;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layout a {
+    color: var(--site-title-color);
+    background-color: var(--main-bg-color);
+    text-decoration: underline;
+}
+
+.layout a:link a:visited a:hover a:active {
+  color: var(--a-color);
+}
