@@ -1,6 +1,8 @@
 name: glog publish
 
 on:
+  schedule:
+    - cron: '0 0 1 1-12 *'
   push:
     branches:
       - gatsby_based
