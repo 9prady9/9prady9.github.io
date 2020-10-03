@@ -32,7 +32,7 @@ const MenuIcon = styled.button`
     }
 
     :nth-child(2) {
-      opacity: ${({nav}) => nav ? "0" : "1" }      
+      opacity: ${({nav}) => nav ? "0" : "1" }
     }
 
     :nth-child(3) {

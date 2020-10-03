@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import Header from "../components/header"
 import Container from "../components/container"
 import styles from "./academia.module.css"
@@ -18,6 +19,13 @@ const Publication = props => (
 
 export default function Academia() {
   return (
+    <>
+    <Helmet>
+      <meta
+        name="PradeepsAcademia"
+        content="Academic info of Pradeep Garigipati"
+      />
+    </Helmet>
     <div>
       <Header headerLevel="1" text="Academia" />
       <ul>
@@ -43,5 +51,6 @@ export default function Academia() {
         />
       </Container>
     </div>
+    </>
   )
 }

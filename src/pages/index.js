@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Header from "../components/header"
 import ProjectTag from "../components/project_tag"
@@ -7,6 +8,13 @@ import qrcode from "../../static/BusinessCard.png"
 
 export default function Home({data}) {
   return (
+    <>
+    <Helmet>
+      <meta
+        name="AboutPradeep"
+        content="General tech info on Pradeep Garigipati"
+      />
+    </Helmet>
     <div style={{ display: `flex`, flexDirection: `column` }} >
       <div style={{ display: `block` }} >
         <div style={{ float: `left` }} >
@@ -59,6 +67,7 @@ export default function Home({data}) {
         ))}
       </div>
     </div>
+    </>
   )
 }
 
