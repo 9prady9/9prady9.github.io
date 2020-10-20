@@ -5,7 +5,7 @@ on:
     - cron: '0 0 1 1-12 *'
   push:
     branches:
-      - gatsby_based
+      - main
 
 jobs:
   build:
@@ -17,5 +17,5 @@ jobs:
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.GIT_REPO_STATS_READ_TOKEN_FOR_GATSBY }}
-          deploy-branch: master
+          deploy-branch: gh-pages
           gatsby-args: --prefix-paths
