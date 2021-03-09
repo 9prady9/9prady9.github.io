@@ -16,7 +16,7 @@ export default function Home({data}) {
       />
       <script
         type="text/javascript"
-        src="http://cdn.youracclaim.com/assets/utilities/embed.js" async>
+        src="https://cdn.youracclaim.com/assets/utilities/embed.js" async>
       </script>
     </Helmet>
     <div style={{ display: `flex`, flexDirection: `column` }} >
