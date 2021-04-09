@@ -18,6 +18,10 @@ export default function Home({data}) {
         type="text/javascript"
         src="https://cdn.youracclaim.com/assets/utilities/embed.js" async>
       </script>
+      <script
+        type="text/javascript"
+        src="//cdn.credly.com/assets/utilities/embed.js" async>
+      </script>
     </Helmet>
     <div style={{ display: `flex`, flexDirection: `column` }} >
       <div style={{ display: `inline-flex` }} >
@@ -40,6 +44,11 @@ export default function Home({data}) {
           data-iframe-height="270"
           data-share-badge-id="a208c918-fed5-4c97-ae1f-d0bbd6e1052a"
           data-share-badge-host="https://www.youracclaim.com">
+        </div>
+        <div data-iframe-width="150"
+          data-iframe-height="270"
+          data-share-badge-id="61e3687c-d3e0-48b1-a5bb-05fda1085642"
+          data-share-badge-host="https://www.credly.com">
         </div>
       </div>
       <Header headerLevel="2" text="Projects"/>
