@@ -28,7 +28,7 @@ export default function Home({data}) {
         <div style={{ float: `left`, marginRight: `12px` }} >
           Pradeep Garigipati <a href="https://www.linkedin.com/in/pradeepgarigipati">(LinkedIn Profile)</a>
           <p>
-            Freelance Software Engineer
+            Engineer@<a href="https://voltrondata.com/">voltrondata</a> , <a href="https://github.com/arrayfire/arrayfire">ArrayFire</a> PMC Member
           </p>
           <p>
             Interests: Computer Graphics and Parallel Computing.
@@ -39,16 +39,6 @@ export default function Home({data}) {
         </div>
         <div style={{ float: `right`, marginRight: `12px`  }} >
           <img src={qrcode} style={{ maxWidth:128, width:`auto`, height:`auto` }} alt="qr code"/>
-        </div>
-        <div data-iframe-width="150"
-          data-iframe-height="270"
-          data-share-badge-id="a208c918-fed5-4c97-ae1f-d0bbd6e1052a"
-          data-share-badge-host="https://www.youracclaim.com">
-        </div>
-        <div data-iframe-width="150"
-          data-iframe-height="270"
-          data-share-badge-id="61e3687c-d3e0-48b1-a5bb-05fda1085642"
-          data-share-badge-host="https://www.credly.com">
         </div>
       </div>
       <Header headerLevel="2" text="Projects"/>
